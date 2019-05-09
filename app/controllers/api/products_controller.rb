@@ -10,14 +10,10 @@ class Api::ProductsController < ApplicationController
 		render 'first_product.json.jbuilder'
 	end
 
-	def second_product_method
-		@product = Product.second #a hash of product data
-		render 'second_product.json.jbuilder'
-	end
-
-	def sixth_product_method
-		@product = Product.find_by(id: 6) #a hash of product data
-		render 'second_product.json.jbuilder'
+	def one_product
+		product_id = params[:id]
+		@product = Product.find_by(id: product_id) #a hash of product data
+		render 'one_product.json.jbuilder'
 	end
 
 end
