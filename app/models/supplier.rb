@@ -1,7 +1,8 @@
 class Supplier < ApplicationRecord
 
-	def products #array of product hashes
-		Product.where(supplier_id: id)
-	end
+	has_many :products #array of product hashes
+	# def products 
+	# 	Product.where(supplier_id: id)
+	# end
 
 end
