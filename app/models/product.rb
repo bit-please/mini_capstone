@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
 
+	has_many :orders
+
 	belongs_to :supplier #single supplier hash
 	# def supplier
 	# 	Supplier.find_by(id: supplier_id)
