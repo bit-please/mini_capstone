@@ -37,7 +37,8 @@ class Api::ProductsController < ApplicationController
 			description: params[:description]
 		)
 		if @product.save
-			# happy path
+			# create a new image
+			Image.create(url: params[:image_url], product_id: @product.id)
 			render 'show.json.jbuilder'
 		else
 			# sad path
