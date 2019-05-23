@@ -5,6 +5,7 @@ json.description product.description
 json.discounted product.is_discounted?
 json.supplier_name product.supplier.name
 json.images product.images
+json.category_names product.category_names
 
 json.formatted do
 	json.price number_to_currency(product.price)
