@@ -1,0 +1,15 @@
+<h1><%= @product.name %></h1>
+
+<% @product.images.each do |image| %>
+	<img src="<%= image.url %>" alt="">
+<% end %>
+
+<h2>Price: <%= @product.price %></h2>
+<h2>Description: <%= @product.description %></h2>
+<h2>Supplier</h2>
+<h4><%= @product.supplier.name %></h4>
+<h4>Email: <%= @product.supplier.email %></h4>
+<h4>Phone: <%= @product.supplier.phone_number %></h4>
+
+<a href="/products/<%= @product.id %>/edit">Edit</a>
+<a href="/products/<%= @product.id %>" data-method="delete" rel="nofollow">Delete</a>
